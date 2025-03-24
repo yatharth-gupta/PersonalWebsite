@@ -182,7 +182,7 @@ const Hero = () => {
           </motion.div>
           
           <motion.p variants={itemVariants}>
-            I build things for the web and solve complex problems with code
+            I build things for the web and solve complex problems with code.
           </motion.p>
           
           <motion.div className="hero-btns" variants={itemVariants}>
