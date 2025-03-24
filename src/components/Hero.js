@@ -168,10 +168,11 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="typewriter">
             <TypeAnimation
               sequence={[
-                'Software Engineer', 2000,
-                'Frontend Developer', 2000,
+                'Software Engineer & Developer', 2000,
                 'Problem Solver', 2000,
-                'Software Engineer & Developer', 3000,
+                'AI Enthusiast', 2000,
+                'Aspiring Entrepreneur', 2000,
+                'Web Developer', 2000,
               ]}
               wrapper="h2"
               cursor={true}
