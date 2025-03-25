@@ -426,7 +426,7 @@ code {
   /* Enhanced Scroll Down Button */
   .scroll-down-enhanced {
     position: absolute;
-    bottom: 40px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;

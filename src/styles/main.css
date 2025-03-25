@@ -1,0 +1,98 @@
+/* Highlighted button styling */
+.highlighted-btn {
+  box-shadow: 0 0 15px rgba(109, 138, 255, 0.8) !important;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.highlighted-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(109, 138, 255, 0.2), rgba(109, 138, 255, 0));
+  z-index: -1;
+  animation: pulse-highlight 2s infinite alternate;
+}
+
+@keyframes pulse-highlight {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Project category bar visibility fix */
+.project-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-category {
+  padding: 0.5rem 1.25rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+}
+
+.project-category.active {
+  background-color: var(--primary-color); 
+  color: white;
+  box-shadow: 0 4px 10px rgba(109, 138, 255, 0.3);
+  border-color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Dark mode support for category */
+.dark .project-category {
+  color: #f0f0f0;
+}
+
+.dark .project-category.active {
+  background-color: var(--primary-color-light);
+  color: #ffffff;
+  border-color: var(--primary-color-light);
+  box-shadow: 0 4px 10px rgba(109, 138, 255, 0.5);
+}
+
+/* Skills section uniform block size */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.same-height-row .skill-card {
+  min-height: 300px;
+}
+
+.skill-icon {
+  transition: all 0.3s ease;
+  filter: none !important;
+}
+
+/* Reduce excessive animations in skills section */
+.skill-card:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
